@@ -1,6 +1,6 @@
-CREATE DATABASE pregnancyStudy; --creating the pregnancystudy database
+CREATE DATABASE pregnancyStudy; -- creating the pregnancystudy database
 USE pregnancyStudy;
---creating the girl table with theses 
+-- creating the girl table with theses 
 CREATE TABLE Girl (
    girl_id INT PRIMARY KEY,
    name VARCHAR(255),
@@ -20,7 +20,7 @@ CREATE TABLE Girl (
 -- SELECT * FROM Girl
 
 
---creating the table for pregnancy case
+-- creating the table for pregnancy case
 CREATE TABLE PregnancyCase (
   case_id INT PRIMARY KEY,
   girl_id INT,
@@ -36,17 +36,17 @@ CREATE TABLE PregnancyCase (
 -- ("502", "2", "15", "current", "miscarriage")
 
 
---creating the table for the area/district
+-- creating the table for the area/district
 CREATE TABLE Area (
  area_id INT PRIMARY KEY,
  Name varchar(255),
  rural_urban BOOLEAN );
 
- INSERT INTO Area(area_id, Name, rural_urban)
- VALUES("25", "rural_Jinja", "1")
+--  INSERT INTO Area(area_id, Name, rural_urban)
+--  VALUES("25", "rural_Jinja", "1")
      
 
-   --creating the table the health service in the area 
+   -- creating the table the health service in the area 
 CREATE TABLE Reproductive_Health_Service (
  service_ID int PRIMARY KEY,
  Name varchar(255),
@@ -54,13 +54,13 @@ CREATE TABLE Reproductive_Health_Service (
  Accessibility varchar(255), 
  area_id INT  );
   
- --table to provide the causes of early pregnancies in tenagers 
+ -- table to provide the causes of early pregnancies in tenagers 
   CREATE TABLE Cause (
     cause_id INT PRIMARY KEY,
     CAUSES varchar(255)
 );
 
---table for the survey.
+-- table for the survey.
 CREATE TABLE Survey(
     Survey_ID int,
     girl_id int,
